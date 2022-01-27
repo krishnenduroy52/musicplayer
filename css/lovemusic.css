@@ -49,7 +49,7 @@
 
 .bar {
     --space: -4px;
-    background-color: #24242424;
+    background-color: transparent;
     overflow: hidden;
     left: var(--space);
     right: var(--space);
