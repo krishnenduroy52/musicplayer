@@ -82,9 +82,25 @@ function timeFormat(ct) {
 var music = document.getElementById("player");
 $("#player").bind("ended", function () {
     let playNow = id + 1
-    if(playNow >= all_songs.length){
+    if (playNow >= all_songs.length) {
         playNow = 1;
     }
     window.location.href = `lovemusic.html?id=${playNow}`;
     // history.replaceState({}, '', `/lovemusic.html?id=${playNow}`);
 });
+
+let isPlaying = () =>{
+    load = document.querySelectorAll(".stroke");
+    if (player.paused) {
+        load.forEach(div =>{
+            div.style.animationPlayState = 'paused';
+        })
+    } else {
+        load.forEach(i =>{
+            i.style.animationPlayState = 'running';
+
+        })        
+    }
+}
+
+setInterval(isPlaying,20);
