@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scrollbar-width: thin;          
+    scrollbar-color: blue orange; 
+    background-color: bisque;
+}
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 90%);;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 80%);;
+    border-radius: 20px;
+    /* border: 3px solid orange; */
+}
+
+.main_section{
+    background-color: hsl(0, 0%, 90%);
+    height: 580px;
+    width: 290px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 20px hsla(0, 0%, 0%, 0.2);
+    padding: 0 20px;
+    z-index: -2;
+}
+
+.center{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 20px;
+}
+
+.nav svg{
+    width: 8%;
+}
+
+.search_svg{
+    position: absolute;
+    left: 0;
+    margin-left: 40px;
+}
+
+.menu_svg{
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+}
+
+.options{
+    margin: 6%;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.options h1{
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    width: fit-content;
+}
+
+#all_music{
+    margin-top: 20px;
+}
+
+p,.now_playing{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+.header-pic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+
+.now_playing {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: auto;
+}
+
+img{
+    z-index: 1;  
+}
+
+.lovemusic img{
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 10px hsla(0, 0%, 0%, 0.137);
+}
+
+.lovemusic p{
+    margin: 15px;
+}
+
+.margin-check {
+    display: inline-block;
+    position: relative;
+}
+  
+.margin-check:after {
+    position: absolute;
+    content: '';
+    border-bottom: 5px solid #b14848;
+    border-radius: 8px;
+    width: 70%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    left: 50%;
+}
+
+.items{
+    margin-top: 100px;
+    height: 270px;
+    margin-left: -10px;
+    overflow-y: auto;
+}
