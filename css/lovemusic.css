@@ -1,6 +1,5 @@
 .player {
     width: 250px;
-    margin-top: 70px;
     background-color: rgb(182, 63, 63);
     display: grid;
     grid-template-columns: 15px 1fr 20px;
@@ -8,7 +7,13 @@
     padding: 8px 24px;
     position: relative;
     border-radius: 64px;
-    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.116); 
+    box-shadow: 0px 0px 20px 5px rgb(0 0 0 / 12%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    bottom: 30px;
+    margin-right: auto;
 }
 
 .control,#current {
@@ -109,4 +114,15 @@
 }
 .stroke:nth-child(7) {
     animation-delay: 0s;
+}
+
+
+@media screen and (max-width: 550px) {
+    .player{
+        width: 350px;
+        bottom: 10%;
+    }
+    .loader{
+        margin-top: 20%;
+    }
 }
