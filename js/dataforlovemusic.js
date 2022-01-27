@@ -13,7 +13,9 @@ const progressArea = document.querySelector(".progress-area");
 
 progressArea.innerHTML =
     `
-        <audio id="player" autoplay src="./all_songs/song/${all_songs[now].path}.mp3"></audio>
+        <audio id="player" autoplay>
+            <source src="./all_songs/song/${all_songs[now].path}.mp3" type="audio/mp3">
+        </audio>
         <div class="player">
             <div class="control">
                 <i class="fas fa-play" id="playbtn"></i>
@@ -77,10 +79,12 @@ function timeFormat(ct) {
 }
 
 
-
-
-
 var music = document.getElementById("player");
 $("#player").bind("ended", function () {
-    window.location.href = `lovemusic.html?id=${id + 1}`;
+    let playNow = id + 1
+    if(playNow >= all_songs.length){
+        playNow = 1;
+    }
+    window.location.href = `lovemusic.html?id=${playNow}`;
+    // history.replaceState({}, '', `/lovemusic.html?id=${playNow}`);
 });
